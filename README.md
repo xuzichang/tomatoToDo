@@ -18,7 +18,7 @@
 
 点击开始专注，跳转到专注页面。
 
-<img src="https://github.com/xuzichang/tomatoToDo/tomatoToDo.assets/image-20200718005829906.png" alt="首页" style="zoom:50%;" /><img src="C:\Users\wattmelon\Desktop\新建文件夹 (2)\tomatoToDo.assets\image-20200718010955097.png" alt="数据绑定" style="zoom:50%;" />
+<img src="https://github.com/xuzichang/tomatoToDo/blob/master/tomatoToDo.assets/image-20200718005829906.png" alt="首页" style="zoom:50%;" /><img src="https://github.com/xuzichang/tomatoToDo/blob/master/tomatoToDo.assets/image-20200718010955097.png" alt="数据绑定" style="zoom:50%;" />
 
 ### 2 专注页
 
@@ -26,7 +26,7 @@
 
 点击暂停，出现“继续”和“放弃”按钮。点击继续回到专注页继续专注；点击放弃回到首页，本次专注记录不保存。
 
-<img src="C:\Users\wattmelon\Desktop\新建文件夹 (2)\tomatoToDo.assets\image-20200718005957025.png" alt="专注页" style="zoom:50%;" /><img src="C:\Users\wattmelon\Desktop\新建文件夹 (2)\tomatoToDo.assets\image-20200718010818093.png" alt="专注页暂停" style="zoom:50%;" />
+<img src="https://github.com/xuzichang/tomatoToDo/blob/master/tomatoToDo.assets/image-20200718005957025.png" alt="专注页" style="zoom:50%;" /><img src="https://github.com/xuzichang/tomatoToDo/blob/master/tomatoToDo.assets/image-20200718010818093.png" alt="专注页暂停" style="zoom:50%;" />
 
 ### 3 统计
 
@@ -36,7 +36,7 @@
 
 *时间-任务类型-专注时长*
 
-<img src="C:\Users\wattmelon\Desktop\新建文件夹 (2)\tomatoToDo.assets\image-20200718010421024.png" alt="今日统计" style="zoom:50%;" /><img src="C:\Users\wattmelon\Desktop\新建文件夹 (2)\tomatoToDo.assets\image-20200718010512464.png" alt="历史统计" style="zoom:50%;" />
+<img src="https://github.com/xuzichang/tomatoToDo/blob/master/tomatoToDo.assets/image-20200718010421024.png" alt="今日统计" style="zoom:50%;" /><img src="https://github.com/xuzichang/tomatoToDo/blob/master/tomatoToDo.assets/image-20200718010512464.png" alt="历史统计" style="zoom:50%;" />
 
 ## 三、实现步骤
 
