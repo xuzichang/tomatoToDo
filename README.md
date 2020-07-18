@@ -19,6 +19,8 @@
 点击开始专注，跳转到专注页面。
 
 <img src="https://github.com/xuzichang/tomatoToDo/blob/master/tomatoToDo.assets/image-20200718005829906.png" alt="首页" style="zoom:50%;" /><img src="https://github.com/xuzichang/tomatoToDo/blob/master/tomatoToDo.assets/image-20200718010955097.png" alt="数据绑定" style="zoom:50%;" />
+![首页](https://github.com/xuzichang/tomatoToDo/blob/master/tomatoToDo.assets/image-20200718005829906.png)
+
 
 ### 2 专注页
 
