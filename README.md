@@ -54,19 +54,19 @@ index.wxml；index.js中data、函数等内容；app.js；
 
 微信全局配置中提供`window`属性，用于设置小程序的状态栏、导航条、标题、窗口背景色。
 
-| 属性                             | 类型     | 默认值   | 描述                                                         |
-| :------------------------------- | :------- | :------- | :----------------------------------------------------------- |
-| ==navigationBarBackgroundColor== | HexColor | #000000  | 导航栏背景颜色，如 `#000000`                                 |
-| ==navigationBarTextStyle==       | string   | white    | 导航栏标题颜色，仅支持 `black` / `white`                     |
-| ==navigationBarTitleText==       | string   |          | 导航栏标题文字内容                                           |
-| navigationStyle                  | string   | default  | 导航栏样式，仅支持以下值： `default` 默认样式 `custom` 自定义导航栏，只保留右上角胶囊按钮。参见注 2。 |
-| backgroundColor                  | HexColor | #ffffff  | 窗口的背景色                                                 |
-| backgroundTextStyle              | string   | dark     | 下拉 loading 的样式，仅支持 `dark` / `light`                 |
-| backgroundColorTop               | string   | #ffffff  | 顶部窗口的背景色，仅 iOS 支持                                |
-| backgroundColorBottom            | string   | #ffffff  | 底部窗口的背景色，仅 iOS 支持                                |
-| enablePullDownRefresh            | boolean  | false    | 是否开启全局的下拉刷新。 详见 [Page.onPullDownRefresh](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html#onpulldownrefresh) |
-| onReachBottomDistance            | number   | 50       | 页面上拉触底事件触发时距页面底部距离，单位为 px。 详见 [Page.onReachBottom](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html#onreachbottom) |
-| pageOrientation                  | string   | portrait | 屏幕旋转设置，支持 `auto` / `portrait` / `landscape` 详见 [响应显示区域变化](https://developers.weixin.qq.com/miniprogram/dev/framework/view/resizable.html) |
+| 属性                                | 类型     | 默认值   | 描述                                                         |
+| :---------------------------------- | :------- | :------- | :----------------------------------------------------------- |
+| <u>navigationBarBackgroundColor</u> | HexColor | #000000  | 导航栏背景颜色，如 `#000000`                                 |
+| <u>navigationBarTextStyle</u>       | string   | white    | 导航栏标题颜色，仅支持 `black` / `white`                     |
+| <u>navigationBarTitleText</u>       | string   |          | 导航栏标题文字内容                                           |
+| navigationStyle                     | string   | default  | 导航栏样式，仅支持以下值： `default` 默认样式 `custom` 自定义导航栏，只保留右上角胶囊按钮。参见注 2。 |
+| backgroundColor                     | HexColor | #ffffff  | 窗口的背景色                                                 |
+| backgroundTextStyle                 | string   | dark     | 下拉 loading 的样式，仅支持 `dark` / `light`                 |
+| backgroundColorTop                  | string   | #ffffff  | 顶部窗口的背景色，仅 iOS 支持                                |
+| backgroundColorBottom               | string   | #ffffff  | 底部窗口的背景色，仅 iOS 支持                                |
+| enablePullDownRefresh               | boolean  | false    | 是否开启全局的下拉刷新。 详见 [Page.onPullDownRefresh](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html#onpulldownrefresh) |
+| onReachBottomDistance               | number   | 50       | 页面上拉触底事件触发时距页面底部距离，单位为 px。 详见 [Page.onReachBottom](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html#onreachbottom) |
+| pageOrientation                     | string   | portrait | 屏幕旋转设置，支持 `auto` / `portrait` / `landscape` 详见 [响应显示区域变化](https://developers.weixin.qq.com/miniprogram/dev/framework/view/resizable.html) |
 
 ```json
   "window":{
@@ -85,24 +85,21 @@ index.wxml；index.js中data、函数等内容；app.js；
 
 1. **滑块**
 
-   微信官方提供了slider组件。==高亮==为用到的属性。
+   微信官方提供了slider组件。
 
-| 属性               | 类型        | 默认值      | 必填   | 说明                                             |
-| :----------------- | :---------- | :---------- | :----- | :----------------------------------------------- |
-| ==min==            | number      | 0           | 否     | 最小值                                           |
-| ==max==            | number      | 100         | 否     | 最大值                                           |
-| step               | number      | 1           | 否     | 步长，取值必须大于 0，并且可被(max - min)整除    |
-| disabled           | boolean     | false       | 否     | 是否禁用                                         |
-| ==value==          | number      | 0           | 否     | 当前取值                                         |
-| ~~color~~          | ~~color~~   | ~~#e9e9e9~~ | ~~否~~ | ~~背景条的颜色（请使用 backgroundColor）~~       |
-| ~~selected-color~~ | ~~color~~   | ~~#1aad19~~ | ~~否~~ | ~~已选择的颜色（请使用 activeColor）~~           |
-| ==activeColor==    | color       | #1aad19     | 否     | 已选择的颜色                                     |
-| backgroundColor    | color       | #e9e9e9     | 否     | 背景条的颜色                                     |
-| block-size         | number      | 28          | 否     | 滑块的大小，取值范围为 12 - 28                   |
-| block-color        | color       | #ffffff     | 否     | 滑块的颜色                                       |
-| ==show-value==     | boolean     | false       | 否     | 是否显示当前 value                               |
-| ==bindchange==     | eventhandle |             | 否     | 完成一次拖动后触发的事件，event.detail = {value} |
-| bindchanging       | eventhandle |             | 否     | 拖动过程中触发的事件，event.detail = {value}     |
+| 属性                                | 类型     | 默认值   | 描述                                                         |
+| :---------------------------------- | :------- | :------- | :----------------------------------------------------------- |
+| <u>navigationBarBackgroundColor</u> | HexColor | #000000  | 导航栏背景颜色，如 `#000000`                                 |
+| <u>navigationBarTextStyle</u>       | string   | white    | 导航栏标题颜色，仅支持 `black` / `white`                     |
+| <u>navigationBarTitleText</u>       | string   |          | 导航栏标题文字内容                                           |
+| navigationStyle                     | string   | default  | 导航栏样式，仅支持以下值： `default` 默认样式 `custom` 自定义导航栏，只保留右上角胶囊按钮。参见注 2。 |
+| backgroundColor                     | HexColor | #ffffff  | 窗口的背景色                                                 |
+| backgroundTextStyle                 | string   | dark     | 下拉 loading 的样式，仅支持 `dark` / `light`                 |
+| backgroundColorTop                  | string   | #ffffff  | 顶部窗口的背景色，仅 iOS 支持                                |
+| backgroundColorBottom               | string   | #ffffff  | 底部窗口的背景色，仅 iOS 支持                                |
+| enablePullDownRefresh               | boolean  | false    | 是否开启全局的下拉刷新。 详见 [Page.onPullDownRefresh](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html#onpulldownrefresh) |
+| onReachBottomDistance               | number   | 50       | 页面上拉触底事件触发时距页面底部距离，单位为 px。 详见 [Page.onReachBottom](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html#onreachbottom) |
+| pageOrientation                     | string   | portrait | 屏幕旋转设置，支持 `auto` / `portrait` / `landscape` 详见 [响应显示区域变化](https://developers.weixin.qq.com/miniprogram/dev/framework/view/resizable.html) |
 
 >  微信没有<div></div>标签，使用<view></view>标签。
 >
@@ -221,8 +218,8 @@ rate = 750rpx / res.windowWidth  = height / res.windowHeight
 | pixelRatio                  | number  | 设备像素比                                                   |
 | screenWidth                 | number  | 屏幕宽度，单位px                                             |
 | screenHeight                | number  | 屏幕高度，单位px                                             |
-| ==windowWidth==             | number  | 可使用窗口宽度，单位px                                       |
-| ==windowHeight==            | number  | 可使用窗口高度，单位px                                       |
+| <u>windowWidth</u>          | number  | 可使用窗口宽度，单位px                                       |
+| <u>windowHeight</u>         | number  | 可使用窗口高度，单位px                                       |
 | statusBarHeight             | number  | 状态栏的高度，单位px                                         |
 | language                    | string  | 微信设置的语言                                               |
 | version                     | string  | 微信版本号                                                   |
@@ -253,17 +250,17 @@ rate = 750rpx / res.windowWidth  = height / res.windowHeight
 <canvas canvas-id="progress_bg" class="progress_bg"></canvas>
 ```
 
-| 属性            | 类型        | 默认值 | 必填 | 说明                                                         |
-| :-------------- | :---------- | :----- | :--- | :----------------------------------------------------------- |
-| type            | string      |        | 否   | 指定 canvas 类型，支持 2d (2.9.0) 和 webgl (2.7.0)           |
-| ==canvas-id==   | string      |        | 否   | canvas 组件的唯一标识符，若指定了 type 则无需再指定该属性    |
-| disable-scroll  | boolean     | false  | 否   | 当在 canvas 中移动时且有绑定手势事件时，禁止屏幕滚动以及下拉刷新 |
-| bindtouchstart  | eventhandle |        | 否   | 手指触摸动作开始                                             |
-| bindtouchmove   | eventhandle |        | 否   | 手指触摸后移动                                               |
-| bindtouchend    | eventhandle |        | 否   | 手指触摸动作结束                                             |
-| bindtouchcancel | eventhandle |        | 否   | 手指触摸动作被打断，如来电提醒，弹窗                         |
-| bindlongtap     | eventhandle |        | 否   | 手指长按 500ms 之后触发，触发了长按事件后进行移动不会触发屏幕的滚动 |
-| binderror       | eventhandle |        | 否   | 当发生错误时触发 error 事件，detail = {errMsg}               |
+| 属性             | 类型        | 默认值 | 必填 | 说明                                                         |
+| :--------------- | :---------- | :----- | :--- | :----------------------------------------------------------- |
+| type             | string      |        | 否   | 指定 canvas 类型，支持 2d (2.9.0) 和 webgl (2.7.0)           |
+| <u>canvas-id</u> | string      |        | 否   | canvas 组件的唯一标识符，若指定了 type 则无需再指定该属性    |
+| disable-scroll   | boolean     | false  | 否   | 当在 canvas 中移动时且有绑定手势事件时，禁止屏幕滚动以及下拉刷新 |
+| bindtouchstart   | eventhandle |        | 否   | 手指触摸动作开始                                             |
+| bindtouchmove    | eventhandle |        | 否   | 手指触摸后移动                                               |
+| bindtouchend     | eventhandle |        | 否   | 手指触摸动作结束                                             |
+| bindtouchcancel  | eventhandle |        | 否   | 手指触摸动作被打断，如来电提醒，弹窗                         |
+| bindlongtap      | eventhandle |        | 否   | 手指长按 500ms 之后触发，触发了长按事件后进行移动不会触发屏幕的滚动 |
+| binderror        | eventhandle |        | 否   | 当发生错误时触发 error 事件，detail = {errMsg}               |
 
 ```javascript
 // 绘制背景圆环,在点击“开始专注”调用的start函数中调用
@@ -425,24 +422,24 @@ drawBg:function(){
 
 微信全局配置中提供`tabBar`属性，可以通过配置指定 tab 栏的表现，以及 tab 切换时显示的对应页面。
 
-| 属性              | 类型     | 必填 | 默认值 | 描述                                                         |
-| :---------------- | :------- | :--- | :----- | :----------------------------------------------------------- |
-| ==color==         | HexColor | 是   |        | tab 上的文字默认颜色，仅支持十六进制颜色                     |
-| ==selectedColor== | HexColor | 是   |        | tab 上的文字<u>**选中**</u>时的颜色，仅支持十六进制颜色      |
-| backgroundColor   | HexColor | 是   |        | tab 的背景色，仅支持十六进制颜色                             |
-| borderStyle       | string   | 否   | black  | tabbar 上边框的颜色， 仅支持 `black` / `white`               |
-| list              | Array    | 是   |        | tab 的列表，详见 `list` 属性说明，最少 2 个、最多 5 个 tab   |
-| position          | string   | 否   | bottom | tabBar 的位置，仅支持 `bottom` / `top`                       |
-| custom            | boolean  | 否   | false  | 自定义 tabBar，见[详情](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/custom-tabbar.html) |
+| 属性                 | 类型     | 必填 | 默认值 | 描述                                                         |
+| :------------------- | :------- | :--- | :----- | :----------------------------------------------------------- |
+| <u>color</u>         | HexColor | 是   |        | tab 上的文字默认颜色，仅支持十六进制颜色                     |
+| <u>selectedColor</u> | HexColor | 是   |        | tab 上的文字<u>**选中**</u>时的颜色，仅支持十六进制颜色      |
+| backgroundColor      | HexColor | 是   |        | tab 的背景色，仅支持十六进制颜色                             |
+| borderStyle          | string   | 否   | black  | tabbar 上边框的颜色， 仅支持 `black` / `white`               |
+| list                 | Array    | 是   |        | tab 的列表，详见 `list` 属性说明，最少 2 个、最多 5 个 tab   |
+| position             | string   | 否   | bottom | tabBar 的位置，仅支持 `bottom` / `top`                       |
+| custom               | boolean  | 否   | false  | 自定义 tabBar，见[详情](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/custom-tabbar.html) |
 
 其中 list 接受一个数组，**只能配置最少 2 个、最多 5 个 tab**。tab 按数组的顺序排序，每个项都是一个对象，其属性值如下：
 
-| 属性                 | 类型   | 必填 | 说明                                                         |
-| :------------------- | :----- | :--- | :----------------------------------------------------------- |
-| ==pagePath==         | string | 是   | 页面路径，必须在 pages 中先定义                              |
-| ==text==             | string | 是   | tab 上按钮文字                                               |
-| ==iconPath==         | string | 否   | 图片路径，icon 大小限制为 40kb，建议尺寸为 81px * 81px，不支持网络图片。 **当 `position` 为 `top` 时，不显示 icon。** |
-| ==selectedIconPath== | string | 否   | <u>**选中**</u>时的图片路径，icon 大小限制为 40kb，建议尺寸为 81px * 81px，不支持网络图片。 **当 `position` 为 `top` 时，不显示 icon。** |
+| 属性                    | 类型   | 必填 | 说明                                                         |
+| :---------------------- | :----- | :--- | :----------------------------------------------------------- |
+| <u>pagePath</u>         | string | 是   | 页面路径，必须在 pages 中先定义                              |
+| <u>text</u>             | string | 是   | tab 上按钮文字                                               |
+| <u>iconPath</u>         | string | 否   | 图片路径，icon 大小限制为 40kb，建议尺寸为 81px * 81px，不支持网络图片。 **当 `position` 为 `top` 时，不显示 icon。** |
+| <u>selectedIconPath</u> | string | 否   | <u>**选中**</u>时的图片路径，icon 大小限制为 40kb，建议尺寸为 81px * 81px，不支持网络图片。 **当 `position` 为 `top` 时，不显示 icon。** |
 
 app.json中修改`tabBar`。
 
