@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<!-- 微信没有div view -->
+<!-- 同一文件内显示计时页和首页hidden -->
+<view hidden="{{clockShow}}">
+  <view class="slider">
+    <slider min="1" max="60" show-value activeColor="#E7624F" backgroundColor="#666666" value="{{time}}" bindchange="slideChange"></slider>
+  </view>
+
+  <view class="task_text">
+    <view class="task_title">选择一个任务</view>
+    <view class="task_desc">在接下来的{{time}}分钟，专注完成这件事</view>
+  </view>
+
+
+  <!-- 
+    图片引入
+    1、标签里面拼接好
+    2、data中补全
+  -->
+  <view class="task_cate">
+  <!-- 
+    Now you can provide attr `wx:key` for a `wx:for` to improve performance. 
+    加上wx:key就行
+  -->
+  <!-- 添加属性 data-属性名 -->
+    <view wx:for="{{cateArr}}" class="cate_item" wx:key="cate" bindtap="clickCate" data-index="{{index}}">
+      <view class="cate_icon"><image src="../../images/{{item.icon}}.png"></image></view>
+      <!-- 设置默认选中为工作  index == cateActive ? "cate_text_active" : "" -->
+      <view class='cate_text {{index == cateActive ? "cate_text_active" : ""}}'>{{item.text}}</view>
+    </view>
+  </view>
+
+  <!-- 按钮 -->
+  <view class="startBtn" bindtap="start">开始专注</view>
+</view>
+
+
+<view class="clock" hidden="{{!clockShow}}" style="height:{{clockHeight}}rpx">
+  <view class="progress">
+    <canvas canvas-id="progress_bg" class="progress_bg"></canvas>
+    <canvas canvas-id="progress_active" class="progress_active"></canvas>
+    <view class="progress_text">{{timeStr}}</view>
+  </view>
+
+  <view class="btns">
+    <view class="okBtn" bindtap="ok" wx:if="{{okShow}}">返回</view>
+    <view class="pauseBtn" bindtap="pause" wx:if="{{pauseShow}}">暂停</view>
+    <view class="continueCancleBtn" wx:if="{{continueCancelShow}}">
+      <view class="continueBtn" bindtap="continue">继续</view>
+      <view class="cancelBtn" bindtap="cancel">放弃</view>
+    </view>
+  </view>
+</view>

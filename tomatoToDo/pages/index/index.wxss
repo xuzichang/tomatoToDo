@@ -1,0 +1,102 @@
+/**index.wxss**/
+page{
+  /* 法1 去除滚动条 */
+  /* overflow: hidden; */
+}
+.slider{
+  /* 微信单位rpx */
+  width: 650rpx;
+  margin: 80rpx auto;
+}
+.task_text{
+  text-align: center;
+}
+.task_title{
+  font-size: 35rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.task_desc{
+  font-size: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #999999;
+}
+
+.task_cate{
+  width:660rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.cate_item{
+  width:220rpx;
+  height: 130rpx;
+  text-align: center;
+  margin: 60rpx 0 20rpx 0;
+}
+.cate_icon{
+  height: 70rpx;
+}
+.cate_icon image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.cate_text{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.cate_text_active{
+  color: #E7624F;
+}
+.startBtn{
+  width: 280rpx;
+  height:90rpx;
+  border: 2rpx solid #E7624F;
+  border-radius: 20rpx;
+  margin: 40rpx auto;
+  line-height: 90rpx;
+  text-align: center;
+  color: #E7624F;
+}
+.clock{
+  height: 3000rpx;
+  background: #E7624F;
+  /* 去除progress白边 */
+  overflow: hidden;
+}
+.progress{
+  width: 400rpx;
+  height:400rpx;
+  margin: 140rpx auto;
+  position: relative;
+}
+.progress_bg, .progress_active{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400rpx;
+  height: 400rpx;
+}
+.progress_text{
+  width:160px;
+  height:60rpx;
+  line-height: 60rpx;
+  color: #ffffff;
+  font-size: 35rpx;
+  position: absolute;
+  /* left: 120rpx; */
+  top: 170rpx;
+  text-align: center;
+}
+.okBtn,.pauseBtn,.continueBtn,.cancelBtn{
+  width: 280rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #ffffff;
+  text-align: center;
+  border:3rpx solid #ffffff;
+  border-radius: 20rpx;
+  margin: 0 auto 20rpx auto;
+}

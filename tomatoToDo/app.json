@@ -1,0 +1,32 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#E7624F",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor": "#E7624F",
+    "color": "#bfbfbf",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "计时",
+        "iconPath":"./images/jishi1.png",
+        "selectedIconPath":"./images/jishi2.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "统计",
+        "iconPath": "./images/tongji1.png",
+        "selectedIconPath": "./images/tongji2.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
